@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E7A9BE361D682E8400046185 /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A9BE351D682E8400046185 /* ItemCollectionViewCell.swift */; };
 		E7CC09201D68252C00A335DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CC091F1D68252C00A335DE /* AppDelegate.swift */; };
-		E7CC09221D68252C00A335DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CC09211D68252C00A335DE /* ViewController.swift */; };
+		E7CC09221D68252C00A335DE /* ItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CC09211D68252C00A335DE /* ItemListViewController.swift */; };
 		E7CC09251D68252C00A335DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7CC09231D68252C00A335DE /* Main.storyboard */; };
 		E7CC09281D68252C00A335DE /* SRMMegaStore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E7CC09261D68252C00A335DE /* SRMMegaStore.xcdatamodeld */; };
 		E7CC092A1D68252C00A335DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7CC09291D68252C00A335DE /* Assets.xcassets */; };
@@ -35,9 +36,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E7A9BE351D682E8400046185 /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		E7CC091C1D68252C00A335DE /* SRMMegaStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SRMMegaStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7CC091F1D68252C00A335DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E7CC09211D68252C00A335DE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E7CC09211D68252C00A335DE /* ItemListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewController.swift; sourceTree = "<group>"; };
 		E7CC09241D68252C00A335DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E7CC09271D68252C00A335DE /* SRMMegaStore.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SRMMegaStore.xcdatamodel; sourceTree = "<group>"; };
 		E7CC09291D68252C00A335DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,7 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				E7CC091F1D68252C00A335DE /* AppDelegate.swift */,
-				E7CC09211D68252C00A335DE /* ViewController.swift */,
+				E7CC09211D68252C00A335DE /* ItemListViewController.swift */,
+				E7A9BE351D682E8400046185 /* ItemCollectionViewCell.swift */,
 				E7CC09231D68252C00A335DE /* Main.storyboard */,
 				E7CC09291D68252C00A335DE /* Assets.xcassets */,
 				E7CC092B1D68252C00A335DE /* LaunchScreen.storyboard */,
@@ -259,7 +262,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7CC09221D68252C00A335DE /* ViewController.swift in Sources */,
+				E7CC09221D68252C00A335DE /* ItemListViewController.swift in Sources */,
+				E7A9BE361D682E8400046185 /* ItemCollectionViewCell.swift in Sources */,
 				E7CC09201D68252C00A335DE /* AppDelegate.swift in Sources */,
 				E7CC09281D68252C00A335DE /* SRMMegaStore.xcdatamodeld in Sources */,
 			);
@@ -409,6 +413,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.SRMRetailStore.SRMMegaStore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -420,6 +425,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.SRMRetailStore.SRMMegaStore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -488,6 +494,7 @@
 				E7CC09491D68252C00A335DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E7CC094A1D68252C00A335DE /* Build configuration list for PBXNativeTarget "SRMMegaStoreTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +503,7 @@
 				E7CC094C1D68252C00A335DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E7CC094D1D68252C00A335DE /* Build configuration list for PBXNativeTarget "SRMMegaStoreUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +512,7 @@
 				E7CC094F1D68252C00A335DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

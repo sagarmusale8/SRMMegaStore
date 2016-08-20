@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ItemListViewController.swift
 //  SRMMegaStore
 //
 //  Created by Sagar Musale on 20/08/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ItemListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
