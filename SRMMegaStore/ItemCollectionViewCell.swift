@@ -10,4 +10,7 @@ import UIKit
 
 class ItemCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var imgItem: UIImageView!
+    @IBOutlet weak var lblItem: UILabel!
+    @IBOutlet weak var lblPrice: UILabel!
 }
