@@ -23,6 +23,7 @@
 		E705B6A61D69F9DE0082E0B8 /* television.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E705B6971D69F9DE0082E0B8 /* television.jpg */; };
 		E705B6A71D69F9DE0082E0B8 /* vaccum.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E705B6981D69F9DE0082E0B8 /* vaccum.jpg */; };
 		E705B6AA1D6A18610082E0B8 /* ItemsDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E705B6A91D6A18610082E0B8 /* ItemsDataHandler.swift */; };
+		E705B6AC1D6A2C630082E0B8 /* AllExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E705B6AB1D6A2C630082E0B8 /* AllExtensions.swift */; };
 		E7A9BE4C1D69EC0900046185 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A9BE441D69EC0900046185 /* AppDelegate.swift */; };
 		E7A9BE4D1D69EC0900046185 /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A9BE471D69EC0900046185 /* ItemCollectionViewCell.swift */; };
 		E7A9BE4E1D69EC0900046185 /* ItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A9BE481D69EC0900046185 /* ItemListViewController.swift */; };
@@ -75,6 +76,7 @@
 		E705B6971D69F9DE0082E0B8 /* television.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = television.jpg; sourceTree = "<group>"; };
 		E705B6981D69F9DE0082E0B8 /* vaccum.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = vaccum.jpg; sourceTree = "<group>"; };
 		E705B6A91D6A18610082E0B8 /* ItemsDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsDataHandler.swift; sourceTree = "<group>"; };
+		E705B6AB1D6A2C630082E0B8 /* AllExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllExtensions.swift; sourceTree = "<group>"; };
 		E7A9BE441D69EC0900046185 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7A9BE471D69EC0900046185 /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		E7A9BE481D69EC0900046185 /* ItemListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemListViewController.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 		E7A9BE451D69EC0900046185 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				E705B6AB1D6A2C630082E0B8 /* AllExtensions.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -406,6 +409,7 @@
 				E7A9BE581D69ED1100046185 /* Item+CoreDataProperties.swift in Sources */,
 				E7A9BE5B1D69ED1100046185 /* Category.swift in Sources */,
 				E7A9BE5A1D69ED1100046185 /* Category+CoreDataProperties.swift in Sources */,
+				E705B6AC1D6A2C630082E0B8 /* AllExtensions.swift in Sources */,
 				E7A9BE4D1D69EC0900046185 /* ItemCollectionViewCell.swift in Sources */,
 				E7A9BE571D69ED1100046185 /* Cart.swift in Sources */,
 				E7A9BE561D69ED1100046185 /* Cart+CoreDataProperties.swift in Sources */,
