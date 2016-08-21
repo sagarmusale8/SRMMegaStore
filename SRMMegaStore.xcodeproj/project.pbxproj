@@ -7,9 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E7A9BE361D682E8400046185 /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A9BE351D682E8400046185 /* ItemCollectionViewCell.swift */; };
-		E7CC09201D68252C00A335DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CC091F1D68252C00A335DE /* AppDelegate.swift */; };
-		E7CC09221D68252C00A335DE /* ItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CC09211D68252C00A335DE /* ItemListViewController.swift */; };
+		E7A9BE4C1D69EC0900046185 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A9BE441D69EC0900046185 /* AppDelegate.swift */; };
+		E7A9BE4D1D69EC0900046185 /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A9BE471D69EC0900046185 /* ItemCollectionViewCell.swift */; };
+		E7A9BE4E1D69EC0900046185 /* ItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A9BE481D69EC0900046185 /* ItemListViewController.swift */; };
+		E7A9BE4F1D69EC0900046185 /* sample.json in Resources */ = {isa = PBXBuildFile; fileRef = E7A9BE4B1D69EC0900046185 /* sample.json */; };
+		E7A9BE561D69ED1100046185 /* Cart+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A9BE501D69ED1100046185 /* Cart+CoreDataProperties.swift */; };
+		E7A9BE571D69ED1100046185 /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A9BE511D69ED1100046185 /* Cart.swift */; };
+		E7A9BE581D69ED1100046185 /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A9BE521D69ED1100046185 /* Item+CoreDataProperties.swift */; };
+		E7A9BE591D69ED1100046185 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A9BE531D69ED1100046185 /* Item.swift */; };
+		E7A9BE5A1D69ED1100046185 /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A9BE541D69ED1100046185 /* Category+CoreDataProperties.swift */; };
+		E7A9BE5B1D69ED1100046185 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A9BE551D69ED1100046185 /* Category.swift */; };
 		E7CC09251D68252C00A335DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7CC09231D68252C00A335DE /* Main.storyboard */; };
 		E7CC09281D68252C00A335DE /* SRMMegaStore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E7CC09261D68252C00A335DE /* SRMMegaStore.xcdatamodeld */; };
 		E7CC092A1D68252C00A335DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7CC09291D68252C00A335DE /* Assets.xcassets */; };
@@ -36,10 +43,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E7A9BE351D682E8400046185 /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		E7A9BE441D69EC0900046185 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E7A9BE471D69EC0900046185 /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		E7A9BE481D69EC0900046185 /* ItemListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemListViewController.swift; sourceTree = "<group>"; };
+		E7A9BE4B1D69EC0900046185 /* sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sample.json; sourceTree = "<group>"; };
+		E7A9BE501D69ED1100046185 /* Cart+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Cart+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E7A9BE511D69ED1100046185 /* Cart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
+		E7A9BE521D69ED1100046185 /* Item+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E7A9BE531D69ED1100046185 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		E7A9BE541D69ED1100046185 /* Category+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E7A9BE551D69ED1100046185 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		E7CC091C1D68252C00A335DE /* SRMMegaStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SRMMegaStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E7CC091F1D68252C00A335DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E7CC09211D68252C00A335DE /* ItemListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewController.swift; sourceTree = "<group>"; };
 		E7CC09241D68252C00A335DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E7CC09271D68252C00A335DE /* SRMMegaStore.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SRMMegaStore.xcdatamodel; sourceTree = "<group>"; };
 		E7CC09291D68252C00A335DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -78,6 +92,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E7A9BE431D69EC0900046185 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				E7A9BE441D69EC0900046185 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		E7A9BE451D69EC0900046185 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		E7A9BE461D69EC0900046185 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E7A9BE471D69EC0900046185 /* ItemCollectionViewCell.swift */,
+				E7A9BE481D69EC0900046185 /* ItemListViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E7A9BE491D69EC0900046185 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E7A9BE501D69ED1100046185 /* Cart+CoreDataProperties.swift */,
+				E7A9BE511D69ED1100046185 /* Cart.swift */,
+				E7A9BE521D69ED1100046185 /* Item+CoreDataProperties.swift */,
+				E7A9BE531D69ED1100046185 /* Item.swift */,
+				E7A9BE541D69ED1100046185 /* Category+CoreDataProperties.swift */,
+				E7A9BE551D69ED1100046185 /* Category.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E7A9BE4A1D69EC0900046185 /* SampleData */ = {
+			isa = PBXGroup;
+			children = (
+				E7A9BE4B1D69EC0900046185 /* sample.json */,
+			);
+			path = SampleData;
+			sourceTree = "<group>";
+		};
 		E7CC09131D68252C00A335DE = {
 			isa = PBXGroup;
 			children = (
@@ -101,9 +160,11 @@
 		E7CC091E1D68252C00A335DE /* SRMMegaStore */ = {
 			isa = PBXGroup;
 			children = (
-				E7CC091F1D68252C00A335DE /* AppDelegate.swift */,
-				E7CC09211D68252C00A335DE /* ItemListViewController.swift */,
-				E7A9BE351D682E8400046185 /* ItemCollectionViewCell.swift */,
+				E7A9BE431D69EC0900046185 /* App */,
+				E7A9BE451D69EC0900046185 /* Common */,
+				E7A9BE461D69EC0900046185 /* Controllers */,
+				E7A9BE491D69EC0900046185 /* Models */,
+				E7A9BE4A1D69EC0900046185 /* SampleData */,
 				E7CC09231D68252C00A335DE /* Main.storyboard */,
 				E7CC09291D68252C00A335DE /* Assets.xcassets */,
 				E7CC092B1D68252C00A335DE /* LaunchScreen.storyboard */,
@@ -236,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7CC092D1D68252C00A335DE /* LaunchScreen.storyboard in Resources */,
+				E7A9BE4F1D69EC0900046185 /* sample.json in Resources */,
 				E7CC092A1D68252C00A335DE /* Assets.xcassets in Resources */,
 				E7CC09251D68252C00A335DE /* Main.storyboard in Resources */,
 			);
@@ -262,9 +324,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7CC09221D68252C00A335DE /* ItemListViewController.swift in Sources */,
-				E7A9BE361D682E8400046185 /* ItemCollectionViewCell.swift in Sources */,
-				E7CC09201D68252C00A335DE /* AppDelegate.swift in Sources */,
+				E7A9BE581D69ED1100046185 /* Item+CoreDataProperties.swift in Sources */,
+				E7A9BE5B1D69ED1100046185 /* Category.swift in Sources */,
+				E7A9BE5A1D69ED1100046185 /* Category+CoreDataProperties.swift in Sources */,
+				E7A9BE4D1D69EC0900046185 /* ItemCollectionViewCell.swift in Sources */,
+				E7A9BE571D69ED1100046185 /* Cart.swift in Sources */,
+				E7A9BE561D69ED1100046185 /* Cart+CoreDataProperties.swift in Sources */,
+				E7A9BE591D69ED1100046185 /* Item.swift in Sources */,
+				E7A9BE4E1D69EC0900046185 /* ItemListViewController.swift in Sources */,
+				E7A9BE4C1D69EC0900046185 /* AppDelegate.swift in Sources */,
 				E7CC09281D68252C00A335DE /* SRMMegaStore.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
