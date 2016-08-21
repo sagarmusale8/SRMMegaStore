@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E705B6991D69F9DE0082E0B8 /* almirah.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = E705B68A1D69F9DE0082E0B8 /* almirah.jpeg */; };
+		E705B69A1D69F9DE0082E0B8 /* bed.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E705B68B1D69F9DE0082E0B8 /* bed.jpg */; };
+		E705B69B1D69F9DE0082E0B8 /* bodybasics.png in Resources */ = {isa = PBXBuildFile; fileRef = E705B68C1D69F9DE0082E0B8 /* bodybasics.png */; };
+		E705B69C1D69F9DE0082E0B8 /* chair.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E705B68D1D69F9DE0082E0B8 /* chair.jpg */; };
+		E705B69D1D69F9DE0082E0B8 /* jeans.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E705B68E1D69F9DE0082E0B8 /* jeans.jpg */; };
+		E705B69E1D69F9DE0082E0B8 /* laptop.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E705B68F1D69F9DE0082E0B8 /* laptop.jpg */; };
+		E705B69F1D69F9DE0082E0B8 /* microwaveOven.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E705B6901D69F9DE0082E0B8 /* microwaveOven.jpg */; };
+		E705B6A01D69F9DE0082E0B8 /* mobile.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E705B6911D69F9DE0082E0B8 /* mobile.jpg */; };
+		E705B6A11D69F9DE0082E0B8 /* sari.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E705B6921D69F9DE0082E0B8 /* sari.jpg */; };
+		E705B6A21D69F9DE0082E0B8 /* shorts.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E705B6931D69F9DE0082E0B8 /* shorts.jpg */; };
+		E705B6A31D69F9DE0082E0B8 /* sofa.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E705B6941D69F9DE0082E0B8 /* sofa.jpg */; };
+		E705B6A41D69F9DE0082E0B8 /* table.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E705B6951D69F9DE0082E0B8 /* table.jpg */; };
+		E705B6A51D69F9DE0082E0B8 /* tees.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E705B6961D69F9DE0082E0B8 /* tees.jpg */; };
+		E705B6A61D69F9DE0082E0B8 /* television.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E705B6971D69F9DE0082E0B8 /* television.jpg */; };
+		E705B6A71D69F9DE0082E0B8 /* vaccum.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E705B6981D69F9DE0082E0B8 /* vaccum.jpg */; };
 		E7A9BE4C1D69EC0900046185 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A9BE441D69EC0900046185 /* AppDelegate.swift */; };
 		E7A9BE4D1D69EC0900046185 /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A9BE471D69EC0900046185 /* ItemCollectionViewCell.swift */; };
 		E7A9BE4E1D69EC0900046185 /* ItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A9BE481D69EC0900046185 /* ItemListViewController.swift */; };
@@ -43,6 +58,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E705B68A1D69F9DE0082E0B8 /* almirah.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = almirah.jpeg; sourceTree = "<group>"; };
+		E705B68B1D69F9DE0082E0B8 /* bed.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bed.jpg; sourceTree = "<group>"; };
+		E705B68C1D69F9DE0082E0B8 /* bodybasics.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bodybasics.png; sourceTree = "<group>"; };
+		E705B68D1D69F9DE0082E0B8 /* chair.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chair.jpg; sourceTree = "<group>"; };
+		E705B68E1D69F9DE0082E0B8 /* jeans.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jeans.jpg; sourceTree = "<group>"; };
+		E705B68F1D69F9DE0082E0B8 /* laptop.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = laptop.jpg; sourceTree = "<group>"; };
+		E705B6901D69F9DE0082E0B8 /* microwaveOven.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = microwaveOven.jpg; sourceTree = "<group>"; };
+		E705B6911D69F9DE0082E0B8 /* mobile.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mobile.jpg; sourceTree = "<group>"; };
+		E705B6921D69F9DE0082E0B8 /* sari.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sari.jpg; sourceTree = "<group>"; };
+		E705B6931D69F9DE0082E0B8 /* shorts.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = shorts.jpg; sourceTree = "<group>"; };
+		E705B6941D69F9DE0082E0B8 /* sofa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sofa.jpg; sourceTree = "<group>"; };
+		E705B6951D69F9DE0082E0B8 /* table.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = table.jpg; sourceTree = "<group>"; };
+		E705B6961D69F9DE0082E0B8 /* tees.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tees.jpg; sourceTree = "<group>"; };
+		E705B6971D69F9DE0082E0B8 /* television.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = television.jpg; sourceTree = "<group>"; };
+		E705B6981D69F9DE0082E0B8 /* vaccum.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = vaccum.jpg; sourceTree = "<group>"; };
 		E7A9BE441D69EC0900046185 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7A9BE471D69EC0900046185 /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		E7A9BE481D69EC0900046185 /* ItemListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemListViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +122,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E705B6891D69F9DE0082E0B8 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				E705B68A1D69F9DE0082E0B8 /* almirah.jpeg */,
+				E705B68B1D69F9DE0082E0B8 /* bed.jpg */,
+				E705B68C1D69F9DE0082E0B8 /* bodybasics.png */,
+				E705B68D1D69F9DE0082E0B8 /* chair.jpg */,
+				E705B68E1D69F9DE0082E0B8 /* jeans.jpg */,
+				E705B68F1D69F9DE0082E0B8 /* laptop.jpg */,
+				E705B6901D69F9DE0082E0B8 /* microwaveOven.jpg */,
+				E705B6911D69F9DE0082E0B8 /* mobile.jpg */,
+				E705B6921D69F9DE0082E0B8 /* sari.jpg */,
+				E705B6931D69F9DE0082E0B8 /* shorts.jpg */,
+				E705B6941D69F9DE0082E0B8 /* sofa.jpg */,
+				E705B6951D69F9DE0082E0B8 /* table.jpg */,
+				E705B6961D69F9DE0082E0B8 /* tees.jpg */,
+				E705B6971D69F9DE0082E0B8 /* television.jpg */,
+				E705B6981D69F9DE0082E0B8 /* vaccum.jpg */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 		E7A9BE431D69EC0900046185 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +184,7 @@
 		E7A9BE4A1D69EC0900046185 /* SampleData */ = {
 			isa = PBXGroup;
 			children = (
+				E705B6891D69F9DE0082E0B8 /* images */,
 				E7A9BE4B1D69EC0900046185 /* sample.json */,
 			);
 			path = SampleData;
@@ -296,10 +349,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E705B6A41D69F9DE0082E0B8 /* table.jpg in Resources */,
 				E7CC092D1D68252C00A335DE /* LaunchScreen.storyboard in Resources */,
+				E705B6A31D69F9DE0082E0B8 /* sofa.jpg in Resources */,
+				E705B69E1D69F9DE0082E0B8 /* laptop.jpg in Resources */,
+				E705B6A21D69F9DE0082E0B8 /* shorts.jpg in Resources */,
+				E705B6A51D69F9DE0082E0B8 /* tees.jpg in Resources */,
 				E7A9BE4F1D69EC0900046185 /* sample.json in Resources */,
 				E7CC092A1D68252C00A335DE /* Assets.xcassets in Resources */,
+				E705B69B1D69F9DE0082E0B8 /* bodybasics.png in Resources */,
+				E705B6A01D69F9DE0082E0B8 /* mobile.jpg in Resources */,
+				E705B69A1D69F9DE0082E0B8 /* bed.jpg in Resources */,
+				E705B6A61D69F9DE0082E0B8 /* television.jpg in Resources */,
+				E705B6A71D69F9DE0082E0B8 /* vaccum.jpg in Resources */,
 				E7CC09251D68252C00A335DE /* Main.storyboard in Resources */,
+				E705B69D1D69F9DE0082E0B8 /* jeans.jpg in Resources */,
+				E705B6A11D69F9DE0082E0B8 /* sari.jpg in Resources */,
+				E705B6991D69F9DE0082E0B8 /* almirah.jpeg in Resources */,
+				E705B69C1D69F9DE0082E0B8 /* chair.jpg in Resources */,
+				E705B69F1D69F9DE0082E0B8 /* microwaveOven.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

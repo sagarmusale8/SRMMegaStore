@@ -14,9 +14,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        checkDataStore()
+        
         return true
     }
 
@@ -106,6 +108,61 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+    
+    // MARK: LoadData if not present
+    // Checking if data is present or not
+    func checkDataStore(){
+        let request = NSFetchRequest(entityName: "Item")
+        let itemCount = self.managedObjectContext.countForFetchRequest(request, error: nil)
+        print("count before:\(itemCount)")
+        
+        if itemCount == 0{
+            uploadSampleData()
+        }
+    }
 
+    // Upload sample data
+    func uploadSampleData() {
+        
+        if let urlForJSON = NSBundle.mainBundle().URLForResource("sample", withExtension: "json"){
+            if let data = NSData(contentsOfURL: urlForJSON){
+                do{
+                    // converting jsonData to dictionary
+                    if let jsonResult = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers) as? NSDictionary{
+                        if let itemJsonArray = jsonResult.objectForKey("item") as? NSArray{
+                            // Adding item entry in core data for each json
+                            for json in itemJsonArray{
+                                if let item = NSEntityDescription.insertNewObjectForEntityForName("Item", inManagedObjectContext: self.managedObjectContext) as? Item{
+                                    item.name = json["name"] as? String
+                                    item.price = json["price"] as? NSNumber
+                                    
+                                    // Adding category
+                                    if let category = NSEntityDescription.insertNewObjectForEntityForName("Category", inManagedObjectContext: self.managedObjectContext) as? Category{
+                                        category.name = (json["category"] as? NSDictionary)!["name"] as? String
+                                        item.category = category
+                                    }
+                                    
+                                    // image
+                                    if let imageName = json["image"] as? String{
+                                        if let image = UIImage(named: imageName){
+                                            let imageData = UIImageJPEGRepresentation(image, 1.0)
+                                            item.image = imageData
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    self.saveContext()
+                    let request = NSFetchRequest(entityName: "Item")
+                    let itemCount = self.managedObjectContext.countForFetchRequest(request, error: nil)
+                    print("count after:\(itemCount)")
+                }
+                catch{
+                    fatalError("Error in creating jsonResult")
+                }
+            }
+        }
+    }
 }
 
