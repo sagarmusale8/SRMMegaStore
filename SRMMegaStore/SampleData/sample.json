@@ -3,7 +3,7 @@
         {
             "name": "Microwave oven",
             "price": 4391,
-            "image": "microwaveOven.png",
+            "image": "microwaveOven.jpg",
             "category": {
                 "name": "Electronics"
             }
@@ -11,7 +11,7 @@
         {
             "name": "Television",
             "price": 9348,
-            "image": "television.png",
+            "image": "television.jpg",
             "category": {
                 "name": "Electronics"
             }
@@ -19,7 +19,7 @@
         {
             "name": "Vaccum cleaner",
             "price": 8732,
-            "image": "vaccum.png",
+            "image": "vaccum.jpg",
             "category": {
                 "name": "Electronics"
             }
@@ -27,7 +27,7 @@
         {
             "name": "Laptop",
             "price": 30320,
-            "image": "laptop.png",
+            "image": "laptop.jpg",
             "category": {
                 "name": "Electronics"
             }
@@ -35,7 +35,7 @@
         {
             "name": "Mobile",
             "price": 18732,
-            "image": "mobile.png",
+            "image": "mobile.jpg",
             "category": {
                 "name": "Electronics"
             }
@@ -43,7 +43,7 @@
         {
             "name": "Table",
             "price": 600,
-            "image": "table.png",
+            "image": "table.jpg",
             "category": {
                 "name": "Furniture"
             }
@@ -51,7 +51,7 @@
         {
             "name": "Chair",
             "price": 300,
-            "image": "television.png",
+            "image": "chair.jpg",
             "category": {
                 "name": "Furniture"
             }
@@ -59,7 +59,7 @@
         {
             "name": "Almirah",
             "price": 2375,
-            "image": "almirah.png",
+            "image": "almirah.jpg",
             "category": {
                 "name": "Furniture"
             }
@@ -67,7 +67,7 @@
         {
             "name": "Bed",
             "price": 30200,
-            "image": "bed.png",
+            "image": "bed.jpg",
             "category": {
                 "name": "Furniture"
             }
@@ -75,7 +75,7 @@
         {
             "name": "Sofa",
             "price": 21375,
-            "image": "sofa.png",
+            "image": "sofa.jpg",
             "category": {
                 "name": "Furniture"
             }
@@ -83,7 +83,7 @@
         {
             "name": "T-shirt",
             "price": 600,
-            "image": "tees.png",
+            "image": "tees.jpg",
             "category": {
                 "name": "Clothing"
             }
@@ -91,7 +91,7 @@
         {
             "name": "Shorts",
             "price": 300,
-            "image": "shorts.png",
+            "image": "shorts.jpg",
             "category": {
                 "name": "Clothing"
             }
@@ -99,7 +99,7 @@
         {
             "name": "Sari",
             "price": 2375,
-            "image": "sari.png",
+            "image": "sari.jpg",
             "category": {
                 "name": "Clothing"
             }
@@ -107,7 +107,7 @@
         {
             "name": "Jeans",
             "price": 30200,
-            "image": "jeans.png",
+            "image": "jeans.jpg",
             "category": {
                 "name": "Clothing"
             }
@@ -115,7 +115,7 @@
         {
             "name": "Body Basics",
             "price": 21375,
-            "image": "bodybasics.png",
+            "image": "bodybasics.jpg",
             "category": {
                 "name": "Clothing"
             }
