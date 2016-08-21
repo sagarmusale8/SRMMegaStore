@@ -1,0 +1,124 @@
+{
+    "item": [
+        {
+            "name": "Microwave oven",
+            "price": 4391,
+            "image": "microwaveOven.png",
+            "category": {
+                "name": "Electronics"
+            }
+        },
+        {
+            "name": "Television",
+            "price": 9348,
+            "image": "television.png",
+            "category": {
+                "name": "Electronics"
+            }
+        },
+        {
+            "name": "Vaccum cleaner",
+            "price": 8732,
+            "image": "vaccum.png",
+            "category": {
+                "name": "Electronics"
+            }
+        },
+        {
+            "name": "Laptop",
+            "price": 30320,
+            "image": "laptop.png",
+            "category": {
+                "name": "Electronics"
+            }
+        },
+        {
+            "name": "Mobile",
+            "price": 18732,
+            "image": "mobile.png",
+            "category": {
+                "name": "Electronics"
+            }
+        },
+        {
+            "name": "Table",
+            "price": 600,
+            "image": "table.png",
+            "category": {
+                "name": "Furniture"
+            }
+        },
+        {
+            "name": "Chair",
+            "price": 300,
+            "image": "television.png",
+            "category": {
+                "name": "Furniture"
+            }
+        },
+        {
+            "name": "Almirah",
+            "price": 2375,
+            "image": "almirah.png",
+            "category": {
+                "name": "Furniture"
+            }
+        },
+        {
+            "name": "Bed",
+            "price": 30200,
+            "image": "bed.png",
+            "category": {
+                "name": "Furniture"
+            }
+        },
+        {
+            "name": "Sofa",
+            "price": 21375,
+            "image": "sofa.png",
+            "category": {
+                "name": "Furniture"
+            }
+        },
+        {
+            "name": "T-shirt",
+            "price": 600,
+            "image": "tees.png",
+            "category": {
+                "name": "Clothing"
+            }
+        },
+        {
+            "name": "Shorts",
+            "price": 300,
+            "image": "shorts.png",
+            "category": {
+                "name": "Clothing"
+            }
+        },
+        {
+            "name": "Sari",
+            "price": 2375,
+            "image": "sari.png",
+            "category": {
+                "name": "Clothing"
+            }
+        },
+        {
+            "name": "Jeans",
+            "price": 30200,
+            "image": "jeans.png",
+            "category": {
+                "name": "Clothing"
+            }
+        },
+        {
+            "name": "Body Basics",
+            "price": 21375,
+            "image": "bodybasics.png",
+            "category": {
+                "name": "Clothing"
+            }
+        }
+    ]
+}
