@@ -154,9 +154,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                         }
                     }
                     self.saveContext()
-                    let request = NSFetchRequest(entityName: "Item")
-                    let itemCount = self.managedObjectContext.countForFetchRequest(request, error: nil)
-                    print("count after:\(itemCount)")
                 }
                 catch{
                     fatalError("Error in creating jsonResult")
