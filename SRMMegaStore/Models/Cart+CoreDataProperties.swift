@@ -2,7 +2,7 @@
 //  Cart+CoreDataProperties.swift
 //  SRMMegaStore
 //
-//  Created by Sagar Musale on 21/08/16.
+//  Created by Sagar Musale on 23/08/16.
 //  Copyright © 2016 SRM. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -14,7 +14,8 @@ import CoreData
 
 extension Cart {
 
+    @NSManaged var count: NSDecimalNumber?
     @NSManaged var total: NSNumber?
-    @NSManaged var item: NSSet?
+    @NSManaged var item: Item?
 
 }
