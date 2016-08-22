@@ -58,8 +58,14 @@ class ItemDetailsViewController: UIViewController {
         }
     }
     
-    // MARK: Action Add to Cart
-    @IBAction func actionAddToCart(sender: AnyObject) {
-        
+    // MARK: Passing data to details view
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // On click of Add to cart, this segue will get invoked.
+        // Adding item to cart
+        if segue.identifier == ProjectConstant.SEGUE_ADD_TO_CART {
+            if let item = selectedItem{
+                CartDataHandler.addItemToCart(item)
+            }
+        }
     }
 }
