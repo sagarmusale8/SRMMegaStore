@@ -29,8 +29,8 @@ class ItemListViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
 
     // MARK: Loading data from core data
-    func fetchAllItems(){
-        if let sortedItems = ItemsDataHandler.getAllItems(){
+    func fetchAllItems(filterType: FilterType? = .ByName){
+        if let sortedItems = ItemsDataHandler.getAllItems(withFilterType: filterType!){
             allItems = sortedItems
         }
         collectionViewItems.reloadData()
@@ -77,6 +77,35 @@ class ItemListViewController: UIViewController, UICollectionViewDelegate, UIColl
         }
         
         return CGSizeMake(width, width+50)
+    }
+    
+    // MARK: On filter button tap
+    @IBAction func actionOnFilter(sender: AnyObject) {
+        let filterButton: UIBarButtonItem = sender as! UIBarButtonItem
+        showFilterView(filterButton)
+    }
+    
+    // Showing filter options
+    func showFilterView(filterButton: UIBarButtonItem){
+        let filterAlertView = UIAlertController(title: "Filters", message: "Choose filter", preferredStyle: UIAlertControllerStyle.ActionSheet)
+        
+        let byNameFilterAction = UIAlertAction(title: "By Name", style: UIAlertActionStyle.Default) { (action: UIAlertAction) in
+            self.fetchAllItems()
+        }
+        
+        let byPriceFilterAction = UIAlertAction(title: "By Price", style: UIAlertActionStyle.Default) { (action: UIAlertAction) in
+            self.fetchAllItems(FilterType.ByPrice)
+        }
+        
+        let byCategoryFilterAction = UIAlertAction(title: "By Category", style: UIAlertActionStyle.Default) { (action: UIAlertAction) in
+            self.fetchAllItems(FilterType.ByCategory)
+        }
+        
+        filterAlertView.addAction(byNameFilterAction)
+        filterAlertView.addAction(byCategoryFilterAction)
+        filterAlertView.addAction(byPriceFilterAction)
+        
+        self.showAsAlertController(filterAlertView, withBarButton: filterButton)
     }
 }
 

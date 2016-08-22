@@ -108,7 +108,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Mega Store" id="vdp-NE-ewE">
-                        <barButtonItem key="leftBarButtonItem" title="Filter" id="PYO-ZY-a5G"/>
+                        <barButtonItem key="leftBarButtonItem" title="Filter" id="PYO-ZY-a5G">
+                            <connections>
+                                <action selector="actionOnFilter:" destination="BYZ-38-t0r" id="spl-7z-KBh"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Cart" id="Gd6-fV-oQ0">
                             <connections>
                                 <segue destination="W8J-Lp-1T1" kind="push" id="OdP-ww-NZ0"/>
