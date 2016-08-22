@@ -12,6 +12,40 @@
 
 import UIKit
 
+// MARK: UILabel
+extension UILabel{
+    
+    // Setting Label textColor and textFont
+    func setProperties(textColor: UIColor? = nil, textFont: UIFont? = nil) {
+        
+        if let lblColor = textColor{
+            self.textColor = lblColor
+        }
+        
+        if let lblFont = textFont{
+            self.font = lblFont
+        }
+    }
+}
+
+// MARK: UIButton
+extension UIButton{
+    
+    // Setting textColor, textFont and backgroundColor
+    func setProperties(textColor: UIColor? = nil, textFont: UIFont? = nil, backgroundColor: UIColor? = UIColor.clearColor()) {
+        
+        self.backgroundColor = backgroundColor!
+        
+        if let lblColor = textColor{
+            self.setTitleColor(lblColor, forState: .Normal)
+        }
+        
+        if let lblFont = textFont{
+            self.titleLabel?.font = lblFont
+        }
+    }
+}
+
 // MARK: UIView
 extension UIView{
     
@@ -23,6 +57,22 @@ extension UIView{
     // Getting view width
     func viewHeight()->CGFloat{
         return self.frame.size.height
+    }
+    
+    // Making view rounded with corner radius, border width and borderColor
+    func makeViewWithRoundedCorner(cornerRadius: CGFloat! = nil, withBorderWidth borderWidth: CGFloat! = nil, withBorderColor borderColor: CGColor! = nil) {
+        // Corner Radius
+        if let radius = cornerRadius{
+            self.layer.cornerRadius = radius
+        }
+        // Border Width
+        if let width = borderWidth{
+            self.layer.borderWidth = width
+        }
+        // Border Color
+        if let color = borderColor {
+            self.layer.borderColor = color
+        }
     }
 }
 
@@ -45,6 +95,24 @@ extension UIViewController{
         }
         
         self.presentViewController(alertController, animated: true, completion: nil)
+    }
+}
+
+// MARK: UIColor
+extension UIColor{
+    
+    // Color with RGB values
+    class func colorWithRGB(red: Int, green: Int, blue: Int)->UIColor{
+        assert(red >= 0 && red <= 255, "Invalid red component")
+        assert(green >= 0 && green <= 255, "Invalid green component")
+        assert(blue >= 0 && blue <= 255, "Invalid blue component")
+        
+        return UIColor(red: CGFloat(red)/255.0, green: CGFloat(green)/255.0, blue: CGFloat(blue)/255.0, alpha: 1.0)
+    }
+    
+    // Color with Hex values
+    class func colorWithHex(hex: Int)->UIColor{
+        return UIColor.colorWithRGB((hex >> 16) & 0xff, green:(hex >> 8) & 0xff, blue:hex & 0xff)
     }
 }
 
