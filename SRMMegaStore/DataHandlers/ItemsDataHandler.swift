@@ -41,8 +41,12 @@ class ItemsDataHandler: NSObject {
                     })
                     break
                 case .ByCategory:
-                    sortedResult = allItems.sort({
-                        $0.price!.compare($1.price!) == NSComparisonResult.OrderedAscending
+                    sortedResult = allItems
+                    sortedResult.sortInPlace({ (itemOne: Item, itemTwo: Item) -> Bool in
+                        if let item1 = itemOne.category as? Category, let item2 = itemTwo.category as? Category{
+                            return (item1.name! < item2.name!)
+                        }
+                        return false
                     })
                     break
                 }
