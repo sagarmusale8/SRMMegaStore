@@ -10,6 +10,7 @@ import UIKit
 
 class CartViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var lblFinalAmount: UILabel!
     @IBOutlet weak var tableViewCart: UITableView!
     
     var allCartItems: [Cart] = []
@@ -19,15 +20,33 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupUI()
         fetchAllCartItems()
+    }
+    
+    // Setting up UI components in view
+    func setupUI(){
+        lblFinalAmount.setProperties(UIColor.blackColor(), textFont: Fonts.Medium_20)
     }
     
     // MARK: Getting all items from cart
     func fetchAllCartItems(){
         if let cartItems = CartDataHandler.getCartItems(){
             allCartItems = cartItems
+            calculateAndDisplayFinalAmount()
             tableViewCart.reloadData()
         }
+    }
+    
+    // MARK: Calculating total price
+    func calculateAndDisplayFinalAmount() {
+        totalPrice = 0
+        for cartItem in allCartItems {
+            if let count = cartItem.count, let uniquePrice = cartItem.item?.price as? Double{
+                totalPrice = totalPrice + (uniquePrice * Double(count))
+            }
+        }
+        lblFinalAmount.text = "Final Amount: $" + String(totalPrice)
     }
     
     // MARK: UITableView DataSource and Delegate

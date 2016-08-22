@@ -150,7 +150,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="92" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qG6-wd-qv2">
-                                <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="400" height="563"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CartTableViewCell" rowHeight="92" id="R1l-RR-E88" customClass="CartTableViewCell" customModule="SRMMegaStore" customModuleProvider="target">
@@ -217,13 +217,32 @@
                                     <outlet property="delegate" destination="W8J-Lp-1T1" id="abd-Hx-hGl"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Final Amount: $5000" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DMj-Ks-G8D">
+                                <rect key="frame" x="20" y="571" width="360" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mKJ-he-BVX">
+                                <rect key="frame" x="0.0" y="563" width="400" height="1"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="xcP-UR-kkg"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="DMj-Ks-G8D" secondAttribute="trailing" constant="20" id="0lG-9r-IgS"/>
                             <constraint firstAttribute="trailing" secondItem="qG6-wd-qv2" secondAttribute="trailing" id="1Pm-K6-LL6"/>
+                            <constraint firstItem="DMj-Ks-G8D" firstAttribute="leading" secondItem="zbk-B2-xXP" secondAttribute="leading" constant="20" id="Egr-fk-gmW"/>
+                            <constraint firstItem="mKJ-he-BVX" firstAttribute="leading" secondItem="zbk-B2-xXP" secondAttribute="leading" id="UQl-PX-lU5"/>
+                            <constraint firstItem="mKJ-he-BVX" firstAttribute="top" secondItem="qG6-wd-qv2" secondAttribute="bottom" id="V3C-Be-gYK"/>
+                            <constraint firstItem="4l2-6D-uUh" firstAttribute="top" secondItem="DMj-Ks-G8D" secondAttribute="bottom" constant="8" id="Whe-SU-Zk3"/>
+                            <constraint firstItem="DMj-Ks-G8D" firstAttribute="top" secondItem="qG6-wd-qv2" secondAttribute="bottom" constant="8" id="haN-TX-DzD"/>
                             <constraint firstItem="qG6-wd-qv2" firstAttribute="top" secondItem="zbk-B2-xXP" secondAttribute="top" id="ixP-cZ-14U"/>
+                            <constraint firstAttribute="trailing" secondItem="mKJ-he-BVX" secondAttribute="trailing" id="jcT-AD-hLZ"/>
                             <constraint firstItem="qG6-wd-qv2" firstAttribute="leading" secondItem="zbk-B2-xXP" secondAttribute="leading" id="qll-zK-joZ"/>
-                            <constraint firstItem="4l2-6D-uUh" firstAttribute="top" secondItem="qG6-wd-qv2" secondAttribute="bottom" id="wV9-Nq-vH8"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Cart" id="q5E-zS-yy4">
@@ -232,6 +251,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="400" height="600"/>
                     <connections>
+                        <outlet property="lblFinalAmount" destination="DMj-Ks-G8D" id="Ket-eB-W7C"/>
                         <outlet property="tableViewCart" destination="qG6-wd-qv2" id="Iy5-7G-UaS"/>
                     </connections>
                 </viewController>
