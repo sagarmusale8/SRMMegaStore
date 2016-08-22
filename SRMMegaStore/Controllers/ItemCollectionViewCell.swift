@@ -13,4 +13,10 @@ class ItemCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imgItem: UIImageView!
     @IBOutlet weak var lblItem: UILabel!
     @IBOutlet weak var lblPrice: UILabel!
+    
+    // Setting up cell
+    func setupCellUI(){
+        lblItem.setProperties(UIColor.whiteColor(), textFont: Fonts.Regular_18)
+        lblPrice.setProperties(UIColor.whiteColor(), textFont: Fonts.Regular_18)
+    }
 }
