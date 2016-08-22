@@ -133,7 +133,7 @@
         <!--Cart-->
         <scene sceneID="ean-jp-NXm">
             <objects>
-                <viewController id="W8J-Lp-1T1" sceneMemberID="viewController">
+                <viewController id="W8J-Lp-1T1" customClass="CartViewController" customModule="SRMMegaStore" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RMA-i6-I3C"/>
                         <viewControllerLayoutGuide type="bottom" id="4l2-6D-uUh"/>
@@ -189,7 +189,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="actionAddToCart:" destination="2lP-4Y-OBw" eventType="touchUpInside" id="a9y-Wh-1d3"/>
+                                    <segue destination="W8J-Lp-1T1" kind="push" identifier="add_to_cart" id="veq-gV-fD2"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GR8-sn-s9I">
@@ -216,7 +216,7 @@
                         <barButtonItem key="backBarButtonItem" title="back" id="Swd-AE-WoU"/>
                         <barButtonItem key="rightBarButtonItem" title="Cart" id="ebk-9E-PzH">
                             <connections>
-                                <segue destination="W8J-Lp-1T1" kind="push" id="d49-ER-H3M"/>
+                                <segue destination="W8J-Lp-1T1" kind="push" identifier="" id="d49-ER-H3M"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -257,6 +257,6 @@
         <image name="no-image" width="300" height="300"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="OdP-ww-NZ0"/>
+        <segue reference="veq-gV-fD2"/>
     </inferredMetricsTieBreakers>
 </document>
