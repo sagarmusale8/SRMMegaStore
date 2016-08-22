@@ -89,7 +89,7 @@
                                             <outlet property="imgItem" destination="fNF-E0-ZaN" id="s5v-hF-vx4"/>
                                             <outlet property="lblItem" destination="Cr0-wA-0oP" id="9bI-v8-h5o"/>
                                             <outlet property="lblPrice" destination="7cR-Vn-R8F" id="6y1-8A-9dj"/>
-                                            <segue destination="2lP-4Y-OBw" kind="push" id="LMI-9I-4hP"/>
+                                            <segue destination="2lP-4Y-OBw" kind="push" identifier="show_details" id="LMI-9I-4hP"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -166,20 +166,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no-image" translatesAutoresizingMaskIntoConstraints="NO" id="wb4-hY-JRB">
-                                <rect key="frame" x="20" y="72" width="300" height="300"/>
+                                <rect key="frame" x="50" y="72" width="300" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="01O-QH-AM5"/>
                                     <constraint firstAttribute="width" constant="300" id="BTq-zV-J97"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W11-ib-mJs">
-                                <rect key="frame" x="20" y="380" width="360" height="21"/>
+                                <rect key="frame" x="50" y="380" width="253" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GR8-sn-s9I">
-                                <rect key="frame" x="20" y="409" width="360" height="21"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xSQ-OU-wnG">
+                                <rect key="frame" x="50" y="408.5" width="300" height="30"/>
+                                <color key="backgroundColor" red="0.43959750450172858" green="0.76413203534031415" blue="0.3970347595746066" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="XMj-I7-uWm"/>
+                                    <constraint firstAttribute="height" constant="30" id="uCV-NO-0gr"/>
+                                </constraints>
+                                <state key="normal" title="Add to Cart">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionAddToCart:" destination="2lP-4Y-OBw" eventType="touchUpInside" id="a9y-Wh-1d3"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GR8-sn-s9I">
+                                <rect key="frame" x="311" y="380" width="39" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -187,14 +201,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="GR8-sn-s9I" firstAttribute="top" secondItem="W11-ib-mJs" secondAttribute="bottom" constant="8" id="1O5-R9-kDy"/>
-                            <constraint firstAttribute="trailing" secondItem="W11-ib-mJs" secondAttribute="trailing" constant="20" id="3yN-1g-KlX"/>
-                            <constraint firstItem="GR8-sn-s9I" firstAttribute="leading" secondItem="aE2-Bi-f2q" secondAttribute="leading" constant="20" id="AOe-Sh-No0"/>
                             <constraint firstItem="wb4-hY-JRB" firstAttribute="top" secondItem="3qP-Xe-h4q" secondAttribute="bottom" constant="8" id="Kaw-My-xF1"/>
-                            <constraint firstItem="W11-ib-mJs" firstAttribute="top" secondItem="wb4-hY-JRB" secondAttribute="bottom" constant="8" id="TT5-hf-ePD"/>
-                            <constraint firstItem="wb4-hY-JRB" firstAttribute="leading" secondItem="aE2-Bi-f2q" secondAttribute="leading" constant="20" id="ZHY-Mk-x80"/>
-                            <constraint firstItem="W11-ib-mJs" firstAttribute="leading" secondItem="aE2-Bi-f2q" secondAttribute="leading" constant="20" id="bev-Zg-LkW"/>
-                            <constraint firstAttribute="trailing" secondItem="GR8-sn-s9I" secondAttribute="trailing" constant="20" id="h2R-YQ-m9M"/>
+                            <constraint firstItem="wb4-hY-JRB" firstAttribute="centerX" secondItem="aE2-Bi-f2q" secondAttribute="centerX" id="QAX-kW-906"/>
+                            <constraint firstItem="W11-ib-mJs" firstAttribute="top" secondItem="wb4-hY-JRB" secondAttribute="bottom" constant="8" id="WXc-a8-339"/>
+                            <constraint firstItem="W11-ib-mJs" firstAttribute="leading" secondItem="wb4-hY-JRB" secondAttribute="leading" id="Wko-9S-0KJ"/>
+                            <constraint firstItem="GR8-sn-s9I" firstAttribute="trailing" secondItem="wb4-hY-JRB" secondAttribute="trailing" id="acE-al-5oP"/>
+                            <constraint firstItem="xSQ-OU-wnG" firstAttribute="top" secondItem="W11-ib-mJs" secondAttribute="bottom" constant="8" id="daI-08-WD6"/>
+                            <constraint firstItem="xSQ-OU-wnG" firstAttribute="centerX" secondItem="aE2-Bi-f2q" secondAttribute="centerX" id="evT-WX-kQp"/>
+                            <constraint firstItem="GR8-sn-s9I" firstAttribute="centerY" secondItem="W11-ib-mJs" secondAttribute="centerY" id="p06-hU-Leh"/>
+                            <constraint firstItem="GR8-sn-s9I" firstAttribute="leading" secondItem="W11-ib-mJs" secondAttribute="trailing" constant="8" id="pMz-il-Wcf"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Details" id="ocl-vC-qNu">
@@ -209,6 +224,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="400" height="600"/>
                     <connections>
+                        <outlet property="btnAddToCart" destination="xSQ-OU-wnG" id="4yt-2a-eKh"/>
                         <outlet property="imgView" destination="wb4-hY-JRB" id="6dE-Xq-tVd"/>
                         <outlet property="lblName" destination="W11-ib-mJs" id="Q0m-K6-9MQ"/>
                         <outlet property="lblPrice" destination="GR8-sn-s9I" id="Hay-Ku-JqS"/>
