@@ -12,4 +12,5 @@ class ProjectConstant: NSObject {
 
     // ID of segue to push detail view 
     static let SEGUE_DETIALS_ID = "show_details"
+    static let SEGUE_ADD_TO_CART = "add_to_cart"
 }
