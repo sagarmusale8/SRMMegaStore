@@ -10,4 +10,5 @@ import UIKit
 
 class Colors: NSObject {
     static let Green_609030 = UIColor.colorWithHex(0x609030)
+    static let Red_D52438 = UIColor.colorWithHex(0xD52438)
 }

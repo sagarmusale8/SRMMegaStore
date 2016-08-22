@@ -13,4 +13,5 @@ class Fonts: NSObject {
     static let Regular_18 = UIFont(name: "AvenirNext-Regular", size: 18.0)
     
     static let Medium_18 = UIFont(name: "AvenirNext-Medium", size: 18.0)
+    static let Medium_14 = UIFont(name: "AvenirNext-Medium", size: 14.0)
 }
