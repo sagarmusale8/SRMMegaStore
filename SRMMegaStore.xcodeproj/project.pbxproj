@@ -27,6 +27,7 @@
 		E705B6AE1D6A33C60082E0B8 /* ItemDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E705B6AD1D6A33C60082E0B8 /* ItemDetailsViewController.swift */; };
 		E7807E4B1D6B7D070018C50D /* CartDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7807E4A1D6B7D070018C50D /* CartDataHandler.swift */; };
 		E7807E4F1D6B7F430018C50D /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7807E4E1D6B7F430018C50D /* CartViewController.swift */; };
+		E7807E571D6B8ECF0018C50D /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7807E561D6B8ECF0018C50D /* CartTableViewCell.swift */; };
 		E7A9BE4C1D69EC0900046185 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A9BE441D69EC0900046185 /* AppDelegate.swift */; };
 		E7A9BE4D1D69EC0900046185 /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A9BE471D69EC0900046185 /* ItemCollectionViewCell.swift */; };
 		E7A9BE4E1D69EC0900046185 /* ItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A9BE481D69EC0900046185 /* ItemListViewController.swift */; };
@@ -86,6 +87,7 @@
 		E705B6AD1D6A33C60082E0B8 /* ItemDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailsViewController.swift; sourceTree = "<group>"; };
 		E7807E4A1D6B7D070018C50D /* CartDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartDataHandler.swift; sourceTree = "<group>"; };
 		E7807E4E1D6B7F430018C50D /* CartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		E7807E561D6B8ECF0018C50D /* CartTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
 		E7A9BE441D69EC0900046185 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7A9BE471D69EC0900046185 /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		E7A9BE481D69EC0900046185 /* ItemListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemListViewController.swift; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 				E7A9BE481D69EC0900046185 /* ItemListViewController.swift */,
 				E705B6AD1D6A33C60082E0B8 /* ItemDetailsViewController.swift */,
 				E7807E4E1D6B7F430018C50D /* CartViewController.swift */,
+				E7807E561D6B8ECF0018C50D /* CartTableViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -437,6 +440,7 @@
 				E7BBD2811D6AE49F004DA59C /* Colors.swift in Sources */,
 				E7A9BE591D69ED1100046185 /* Item.swift in Sources */,
 				E705B6AA1D6A18610082E0B8 /* ItemsDataHandler.swift in Sources */,
+				E7807E571D6B8ECF0018C50D /* CartTableViewCell.swift in Sources */,
 				E705B6AE1D6A33C60082E0B8 /* ItemDetailsViewController.swift in Sources */,
 				E7A9BE4E1D69EC0900046185 /* ItemListViewController.swift in Sources */,
 				E7A9BE4C1D69EC0900046185 /* AppDelegate.swift in Sources */,

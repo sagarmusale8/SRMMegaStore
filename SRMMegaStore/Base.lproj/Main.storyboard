@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Mega Store-->
@@ -18,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="CKC-XP-bEP">
-                                <rect key="frame" x="0.0" y="64" width="400" height="536"/>
+                                <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="ptg-yq-Xu4">
                                     <size key="itemSize" width="185" height="150"/>
@@ -102,10 +103,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="CKC-XP-bEP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="JZq-xq-j3W"/>
-                            <constraint firstItem="CKC-XP-bEP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="fiG-ua-jkG"/>
+                            <constraint firstItem="CKC-XP-bEP" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="TAE-fP-lxN"/>
+                            <constraint firstItem="CKC-XP-bEP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-64" id="fiG-ua-jkG"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="CKC-XP-bEP" secondAttribute="bottom" id="kFs-PA-XSE"/>
                             <constraint firstAttribute="trailing" secondItem="CKC-XP-bEP" secondAttribute="trailing" id="mIZ-iT-DJL"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="fiG-ua-jkG"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Mega Store" id="vdp-NE-ewE">
                         <barButtonItem key="leftBarButtonItem" title="Filter" id="PYO-ZY-a5G">
@@ -141,13 +148,92 @@
                     <view key="view" contentMode="scaleToFill" id="zbk-B2-xXP">
                         <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="92" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qG6-wd-qv2">
+                                <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CartTableViewCell" rowHeight="92" id="R1l-RR-E88" customClass="CartTableViewCell" customModule="SRMMegaStore" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="400" height="92"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="R1l-RR-E88" id="2On-Sd-9nR">
+                                            <rect key="frame" x="0.0" y="0.0" width="400" height="91.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UmZ-LW-7sW">
+                                                    <rect key="frame" x="8" y="8" width="66" height="75.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="66" id="5WF-lh-s6Y"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kNv-Ze-9Ym">
+                                                    <rect key="frame" x="82" y="8" width="238" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="15d-go-AQi">
+                                                    <rect key="frame" x="82" y="30" width="310" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zAh-fC-uPl">
+                                                    <rect key="frame" x="328" y="2.5" width="64" height="29"/>
+                                                    <color key="backgroundColor" red="0.83529411764705885" green="0.14117647058823529" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="64" id="iSD-tF-QEb"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <state key="normal" title="Remove">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="UmZ-LW-7sW" secondAttribute="bottom" constant="8" id="3i6-4Q-Lqe"/>
+                                                <constraint firstItem="zAh-fC-uPl" firstAttribute="leading" secondItem="kNv-Ze-9Ym" secondAttribute="trailing" constant="8" id="7C3-Bw-PaX"/>
+                                                <constraint firstItem="UmZ-LW-7sW" firstAttribute="leading" secondItem="2On-Sd-9nR" secondAttribute="leading" constant="8" id="7fM-75-jAS"/>
+                                                <constraint firstItem="zAh-fC-uPl" firstAttribute="centerY" secondItem="kNv-Ze-9Ym" secondAttribute="centerY" id="9Fx-nk-Xy6"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="zAh-fC-uPl" secondAttribute="trailing" id="BpT-J1-pk2"/>
+                                                <constraint firstItem="UmZ-LW-7sW" firstAttribute="top" secondItem="2On-Sd-9nR" secondAttribute="top" constant="8" id="Kn4-GT-aad"/>
+                                                <constraint firstItem="kNv-Ze-9Ym" firstAttribute="top" secondItem="UmZ-LW-7sW" secondAttribute="top" id="NVW-bv-uUA"/>
+                                                <constraint firstItem="15d-go-AQi" firstAttribute="leading" secondItem="kNv-Ze-9Ym" secondAttribute="leading" id="UFi-pk-q4q"/>
+                                                <constraint firstItem="15d-go-AQi" firstAttribute="top" secondItem="kNv-Ze-9Ym" secondAttribute="bottom" constant="4" id="X53-Bw-gKT"/>
+                                                <constraint firstItem="kNv-Ze-9Ym" firstAttribute="leading" secondItem="UmZ-LW-7sW" secondAttribute="trailing" constant="8" id="guf-b2-1ye"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="15d-go-AQi" secondAttribute="trailing" id="zUc-cq-0oH"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="btnRemove" destination="zAh-fC-uPl" id="0mh-vN-WPV"/>
+                                            <outlet property="imgView" destination="UmZ-LW-7sW" id="Tld-Ua-aBB"/>
+                                            <outlet property="lblName" destination="kNv-Ze-9Ym" id="y7n-vl-JPQ"/>
+                                            <outlet property="lblPrice" destination="15d-go-AQi" id="Dks-PX-CfK"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="W8J-Lp-1T1" id="QXy-ai-zbr"/>
+                                    <outlet property="delegate" destination="W8J-Lp-1T1" id="abd-Hx-hGl"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="qG6-wd-qv2" secondAttribute="trailing" id="1Pm-K6-LL6"/>
+                            <constraint firstItem="qG6-wd-qv2" firstAttribute="top" secondItem="zbk-B2-xXP" secondAttribute="top" id="ixP-cZ-14U"/>
+                            <constraint firstItem="qG6-wd-qv2" firstAttribute="leading" secondItem="zbk-B2-xXP" secondAttribute="leading" id="qll-zK-joZ"/>
+                            <constraint firstItem="4l2-6D-uUh" firstAttribute="top" secondItem="qG6-wd-qv2" secondAttribute="bottom" id="wV9-Nq-vH8"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Cart" id="q5E-zS-yy4">
                         <barButtonItem key="backBarButtonItem" title="back" id="mWI-DK-9Ce"/>
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="400" height="600"/>
+                    <connections>
+                        <outlet property="tableViewCart" destination="qG6-wd-qv2" id="Iy5-7G-UaS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BAz-2u-zyF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -257,6 +343,6 @@
         <image name="no-image" width="300" height="300"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="veq-gV-fD2"/>
+        <segue reference="OdP-ww-NZ0"/>
     </inferredMetricsTieBreakers>
 </document>

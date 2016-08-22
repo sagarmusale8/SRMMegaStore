@@ -8,9 +8,13 @@
 
 import UIKit
 
-class CartViewController: UIViewController {
+class CartViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet weak var tableViewCart: UITableView!
     
     var allCartItems: [Cart] = []
+    var totalPrice: Double = 0
+    let reusableIdForCartCell = String(CartTableViewCell)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,8 +25,39 @@ class CartViewController: UIViewController {
     // MARK: Getting all items from cart
     func fetchAllCartItems(){
         if let cartItems = CartDataHandler.getCartItems(){
-            print("cartItems:\(cartItems.count)")
+            allCartItems = cartItems
+            tableViewCart.reloadData()
         }
+    }
+    
+    // MARK: UITableView DataSource and Delegate
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return allCartItems.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        if let cartCell = tableView.dequeueReusableCellWithIdentifier(reusableIdForCartCell) as? CartTableViewCell {
+            let cartItem = allCartItems[indexPath.row]
+            
+            if let name = cartItem.item?.name {
+                cartCell.lblName.text = name
+            }
+            if let count = Int(cartItem.count!) as? Int, let price = cartItem.item?.price as? Double{
+                let priceTotal = price * Double(count)
+                let priceText = String("\(count) x \(price) = \(priceTotal)")
+                cartCell.lblPrice.text = priceText
+            }
+            if let imageData = cartItem.item?.image{
+                cartCell.imgView.image = UIImage(data: imageData)
+            }
+            cartCell.btnRemove.tag = indexPath.row
+            cartCell.setupCellUI()
+            
+            return cartCell
+        }
+        
+        return UITableViewCell()
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,15 +65,4 @@ class CartViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
