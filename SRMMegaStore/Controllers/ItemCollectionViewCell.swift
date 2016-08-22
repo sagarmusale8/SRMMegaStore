@@ -19,4 +19,11 @@ class ItemCollectionViewCell: UICollectionViewCell {
         lblItem.setProperties(UIColor.whiteColor(), textFont: Fonts.Regular_18)
         lblPrice.setProperties(UIColor.whiteColor(), textFont: Fonts.Regular_18)
     }
+    
+    // Cleaning UI for reuse
+    override func prepareForReuse() {
+        lblPrice.text = ""
+        lblItem.text = ""
+        imgItem.image = nil
+    }
 }
