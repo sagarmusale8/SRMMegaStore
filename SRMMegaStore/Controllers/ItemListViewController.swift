@@ -51,6 +51,7 @@ class ItemListViewController: UIViewController, UICollectionViewDelegate, UIColl
             if let imageData = item.image{
                 itemCollectionViewCell.imgItem.image = UIImage(data: imageData)
             }
+            itemCollectionViewCell.setupCellUI()
             
             return itemCollectionViewCell
         }
@@ -106,6 +107,17 @@ class ItemListViewController: UIViewController, UICollectionViewDelegate, UIColl
         filterAlertView.addAction(byPriceFilterAction)
         
         self.showAsAlertController(filterAlertView, withBarButton: filterButton)
+    }
+    
+    // MARK: Passing data to details view
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == ProjectConstant.SEGUE_DETIALS_ID, let destination = segue.destinationViewController as? ItemDetailsViewController {
+            if let cell = sender as? UICollectionViewCell, let indexPath = collectionViewItems.indexPathForCell(cell) {
+                destination.selectedItemBlock = {()->Item in
+                    return self.allItems[indexPath.row]
+                }
+            }
+        }
     }
 }
 
