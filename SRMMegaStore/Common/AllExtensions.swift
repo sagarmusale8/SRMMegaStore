@@ -96,6 +96,18 @@ extension UIViewController{
         
         self.presentViewController(alertController, animated: true, completion: nil)
     }
+    
+    // Show confirmation alert with one alert action
+    func showConfirmationAlertWithTitle(title: String, withMsg msg: String, withAlertAction action: UIAlertAction, withCompletionBlock block:(()->Void)?=nil){
+        let alertController = UIAlertController(title: title, message: msg, preferredStyle: UIAlertControllerStyle.Alert)
+        
+        let noAction = UIAlertAction(title: "No", style: UIAlertActionStyle.Cancel, handler: nil)
+        
+        alertController.addAction(action)
+        alertController.addAction(noAction)
+        
+        self.presentViewController(alertController, animated: true, completion: block)
+    }
 }
 
 // MARK: UIColor
