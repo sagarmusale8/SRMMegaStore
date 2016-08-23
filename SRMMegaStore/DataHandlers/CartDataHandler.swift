@@ -54,11 +54,11 @@ class CartDataHandler: NSObject {
     }
     
     // Remove item from cart
-    class func removeItemFromCart(item: Item){
+    class func removeItemFromCart(cartItem: Cart)->Bool{
         let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate
         let context = appDelegate?.managedObjectContext
         let request = NSFetchRequest(entityName: "Cart")
-        if let itemName = item.name{
+        if let itemName = cartItem.item!.name{
             request.predicate = NSPredicate(format: "item.name == %@", itemName)
         }
         
@@ -67,10 +67,12 @@ class CartDataHandler: NSObject {
             if let cartItem = fetchedItems.first{
                 context?.deleteObject(cartItem)
                 try context?.save()
+                return true
             }
         } catch {
             fatalError("Error in deleting cart item")
         }
+        return false
     }
     
     // Getting all items in cart
