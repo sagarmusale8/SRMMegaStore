@@ -167,7 +167,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kNv-Ze-9Ym">
-                                                    <rect key="frame" x="82" y="8" width="238" height="18"/>
+                                                    <rect key="frame" x="82" y="8" width="262" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -179,13 +179,13 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zAh-fC-uPl">
-                                                    <rect key="frame" x="328" y="2.5" width="64" height="29"/>
+                                                    <rect key="frame" x="352" y="2.5" width="40" height="29"/>
                                                     <color key="backgroundColor" red="0.83529411764705885" green="0.14117647058823529" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="64" id="iSD-tF-QEb"/>
+                                                        <constraint firstAttribute="width" constant="40" id="iSD-tF-QEb"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <state key="normal" title="Remove">
+                                                    <state key="normal" title="X">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                 </button>

@@ -71,12 +71,27 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
                 cartCell.imgView.image = UIImage(data: imageData)
             }
             cartCell.btnRemove.tag = indexPath.row
+            cartCell.btnRemove.addTarget(self, action: #selector(actionRemoveItem(_:)), forControlEvents: .TouchUpInside)
             cartCell.setupCellUI()
             
             return cartCell
         }
         
         return UITableViewCell()
+    }
+    
+    // MARK: Removing item action
+    func actionRemoveItem(sender: UIButton){
+        let alertAction = UIAlertAction(title: "Yes", style: UIAlertActionStyle.Default) { (action) in
+            let itemToRemove = self.allCartItems[sender.tag]
+            if CartDataHandler.removeItemFromCart(itemToRemove){
+                self.allCartItems.removeAtIndex(sender.tag)
+                self.calculateAndDisplayFinalAmount()
+                self.tableViewCart.reloadData()
+            }
+        }
+        
+        showConfirmationAlertWithTitle("Remove Item?", withMsg: "Do you want to remove this item?", withAlertAction: alertAction)
     }
 
     override func didReceiveMemoryWarning() {
