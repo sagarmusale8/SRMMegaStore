@@ -16,8 +16,8 @@ class ItemCollectionViewCell: UICollectionViewCell {
     
     // Setting up cell
     func setupCellUI(){
-        lblItem.setProperties(UIColor.whiteColor(), textFont: Fonts.Regular_18)
-        lblPrice.setProperties(UIColor.whiteColor(), textFont: Fonts.Regular_18)
+        lblItem.setProperties(UIColor.whiteColor(), textFont: Fonts.Regular_16)
+        lblPrice.setProperties(UIColor.whiteColor(), textFont: Fonts.Regular_14)
     }
     
     // Cleaning UI for reuse

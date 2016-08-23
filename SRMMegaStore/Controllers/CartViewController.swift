@@ -26,7 +26,8 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     // Setting up UI components in view
     func setupUI(){
-        lblFinalAmount.setProperties(UIColor.blackColor(), textFont: Fonts.Medium_20)
+        lblFinalAmount.setProperties(UIColor.whiteColor(), textFont: Fonts.Medium_14)
+        tableViewCart.separatorStyle = .None
     }
     
     // MARK: Getting all items from cart
@@ -70,8 +71,6 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
             if let imageData = cartItem.item?.image{
                 cartCell.imgView.image = UIImage(data: imageData)
             }
-            cartCell.btnRemove.tag = indexPath.row
-            cartCell.btnRemove.addTarget(self, action: #selector(actionRemoveItem(_:)), forControlEvents: .TouchUpInside)
             cartCell.setupCellUI()
             
             return cartCell
@@ -80,12 +79,35 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
         return UITableViewCell()
     }
     
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
+        let removeAction = UITableViewRowAction(style: UITableViewRowActionStyle.Destructive, title: "Remove") { (rowAction, indexPath) in
+            self.actionRemoveItemAtIndex(indexPath.row)
+        }
+        return [removeAction]
+    }
+    
+    // MARK: Passing data to details view
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == ProjectConstant.SEGUE_SHOW_CART_ITEM_DETAIL, let destination = segue.destinationViewController as? ItemDetailsViewController {
+            if let cell = sender as? UITableViewCell, let indexPath = tableViewCart.indexPathForCell(cell) {
+                destination.selectedItemBlock = {()->Item in
+                    let cartItem = self.allCartItems[indexPath.row]
+                    return cartItem.item!
+                }
+            }
+        }
+    }
+    
     // MARK: Removing item action
-    func actionRemoveItem(sender: UIButton){
+    func actionRemoveItemAtIndex(index: Int){
         let alertAction = UIAlertAction(title: "Yes", style: UIAlertActionStyle.Default) { (action) in
-            let itemToRemove = self.allCartItems[sender.tag]
+            let itemToRemove = self.allCartItems[index]
             if CartDataHandler.removeItemFromCart(itemToRemove){
-                self.allCartItems.removeAtIndex(sender.tag)
+                self.allCartItems.removeAtIndex(index)
                 self.calculateAndDisplayFinalAmount()
                 self.tableViewCart.reloadData()
             }
