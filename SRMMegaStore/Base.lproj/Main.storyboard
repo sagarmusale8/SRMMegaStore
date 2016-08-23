@@ -274,7 +274,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no-image" translatesAutoresizingMaskIntoConstraints="NO" id="wb4-hY-JRB">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shorts.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="wb4-hY-JRB">
                                 <rect key="frame" x="50" y="72" width="300" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="01O-QH-AM5"/>
@@ -341,7 +341,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BZH-vf-jSP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3306" y="340"/>
+            <point key="canvasLocation" x="3037" y="330"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pA3-3Z-izv">
@@ -383,8 +383,9 @@
     </scenes>
     <resources>
         <image name="no-image" width="300" height="300"/>
+        <image name="shorts.jpg" width="225" height="225"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="OdP-ww-NZ0"/>
+        <segue reference="veq-gV-fD2"/>
     </inferredMetricsTieBreakers>
 </document>
