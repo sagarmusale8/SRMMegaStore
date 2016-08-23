@@ -98,12 +98,11 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if let item = self.allCartItems[indexPath.row].item{
-            self.navigationController?.dismissViewControllerAnimated(true) {
-                // After selection of item, loading that item in details view
-                if let selectionBlock = self.itemSelectionBlock {
-                    selectionBlock(item)
-                }
+            // After selection of item, loading that item in details view
+            if let selectionBlock = self.itemSelectionBlock {
+                selectionBlock(item)
             }
+            self.navigationController?.dismissViewControllerAnimated(true, completion: nil)
         }
     }
     

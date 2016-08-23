@@ -24,6 +24,7 @@ class ItemDetailsViewController: UIViewController {
         super.viewDidLoad()
 
         setupUI()
+        showDetials()
     }
     
     // Setting up UI
@@ -36,7 +37,6 @@ class ItemDetailsViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        showDetials()
     }
 
     override func didReceiveMemoryWarning() {
