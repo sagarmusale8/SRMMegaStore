@@ -48,13 +48,19 @@ class ItemDetailsViewController: UIViewController {
     func showDetials(){
         if let getSelectedItemBlock = selectedItemBlock{
             selectedItem = getSelectedItemBlock()
-            self.lblName.text = selectedItem!.name
-            if let price = selectedItem!.price{
-                self.lblPrice.text = "$\(price)"
-            }
-            if let imageData = selectedItem!.image{
-                self.imgView.image = UIImage(data: imageData)
-            }
+            loadDetailsForItem(selectedItem!)
+        }
+    }
+    
+    // Loading details for item in view
+    func loadDetailsForItem(item: Item){
+        selectedItem = item
+        self.lblName.text = item.name
+        if let price = item.price{
+            self.lblPrice.text = "$\(price)"
+        }
+        if let imageData = item.image{
+            self.imgView.image = UIImage(data: imageData)
         }
     }
     
@@ -65,6 +71,19 @@ class ItemDetailsViewController: UIViewController {
         if segue.identifier == ProjectConstant.SEGUE_ADD_TO_CART {
             if let item = selectedItem{
                 CartDataHandler.addItemToCart(item)
+            }
+            addItemSelectionBlockToCartViewWithSegue(segue)
+        } else if segue.identifier == ProjectConstant.SEGUE_PUSH_CART {
+            addItemSelectionBlockToCartViewWithSegue(segue)
+        }
+    }
+    
+    // Adding itemSelection block to CartView
+    func addItemSelectionBlockToCartViewWithSegue(segue: UIStoryboardSegue){
+        // if item selected in Cart then it will get load in this view itself
+        if let navController = segue.destinationViewController as? UINavigationController, let cartController = navController.viewControllers.first as? CartViewController{
+            cartController.itemSelectionBlock = { (item: Item)->Void in
+                self.loadDetailsForItem(item)
             }
         }
     }

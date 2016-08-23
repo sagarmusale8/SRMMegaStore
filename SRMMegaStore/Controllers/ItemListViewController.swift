@@ -112,10 +112,31 @@ class ItemListViewController: UIViewController, UICollectionViewDelegate, UIColl
     // MARK: Passing data to details view
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == ProjectConstant.SEGUE_DETIALS_ID, let destination = segue.destinationViewController as? ItemDetailsViewController {
-            if let cell = sender as? UICollectionViewCell, let indexPath = collectionViewItems.indexPathForCell(cell) {
+            // if cart selects any item then it will load this item
+            if let isItem = sender?.isKindOfClass(Item.self) where isItem{
                 destination.selectedItemBlock = {()->Item in
-                    return self.allItems[indexPath.row]
+                    return (sender as! Item)
                 }
+            }
+            // If normal selection occures
+            else if let isCollectionViewCell = sender?.isKindOfClass(UICollectionViewCell.self) where isCollectionViewCell{
+                if let cell = sender as? UICollectionViewCell, let indexPath = collectionViewItems.indexPathForCell(cell) {
+                    destination.selectedItemBlock = {()->Item in
+                        return self.allItems[indexPath.row]
+                    }
+                }
+            }
+            
+        } else if segue.identifier == ProjectConstant.SEGUE_SHOW_CART_FROM_LIST{
+            addItemSelectionBlockToCartViewWithSegue(segue)
+        }
+    }
+    
+    // Adding
+    func addItemSelectionBlockToCartViewWithSegue(segue: UIStoryboardSegue){
+        if let navController = segue.destinationViewController as? UINavigationController, let cartController = navController.viewControllers.first as? CartViewController{
+            cartController.itemSelectionBlock = {(item: Item)->Void in
+                self.performSegueWithIdentifier(ProjectConstant.SEGUE_DETIALS_ID, sender: item)
             }
         }
     }

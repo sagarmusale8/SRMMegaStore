@@ -16,6 +16,7 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
     var allCartItems: [Cart] = []
     var totalPrice: Double = 0
     let reusableIdForCartCell = String(CartTableViewCell)
+    var itemSelectionBlock: ((Item)->Void)?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,11 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
     func setupUI(){
         lblFinalAmount.setProperties(UIColor.whiteColor(), textFont: Fonts.Medium_14)
         tableViewCart.separatorStyle = .None
+    }
+    
+    // Action on cancel
+    @IBAction func actionOnCancel(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     // MARK: Getting all items from cart
@@ -90,13 +96,12 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
         return [removeAction]
     }
     
-    // MARK: Passing data to details view
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == ProjectConstant.SEGUE_SHOW_CART_ITEM_DETAIL, let destination = segue.destinationViewController as? ItemDetailsViewController {
-            if let cell = sender as? UITableViewCell, let indexPath = tableViewCart.indexPathForCell(cell) {
-                destination.selectedItemBlock = {()->Item in
-                    let cartItem = self.allCartItems[indexPath.row]
-                    return cartItem.item!
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if let item = self.allCartItems[indexPath.row].item{
+            self.navigationController?.dismissViewControllerAnimated(true) {
+                // After selection of item, loading that item in details view
+                if let selectionBlock = self.itemSelectionBlock {
+                    selectionBlock(item)
                 }
             }
         }

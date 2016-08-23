@@ -122,7 +122,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Cart" id="Gd6-fV-oQ0">
                             <connections>
-                                <segue destination="W8J-Lp-1T1" kind="push" id="OdP-ww-NZ0"/>
+                                <segue destination="sMk-rM-gxQ" kind="presentation" identifier="show_cart_from_list" id="OdP-ww-NZ0"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -207,7 +207,6 @@
                                             <outlet property="imgView" destination="UmZ-LW-7sW" id="Tld-Ua-aBB"/>
                                             <outlet property="lblName" destination="kNv-Ze-9Ym" id="y7n-vl-JPQ"/>
                                             <outlet property="lblPrice" destination="15d-go-AQi" id="Dks-PX-CfK"/>
-                                            <segue destination="2lP-4Y-OBw" kind="push" identifier="show_cart_item_details" id="RXi-bq-swd"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -245,8 +244,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Cart" id="q5E-zS-yy4">
-                        <barButtonItem key="backBarButtonItem" title="back" id="mWI-DK-9Ce"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="XX2-yE-hwP">
+                            <connections>
+                                <action selector="actionOnCancel:" destination="W8J-Lp-1T1" id="1qP-35-1oo"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="400" height="600"/>
                     <connections>
@@ -256,7 +260,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BAz-2u-zyF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1905" y="734"/>
+            <point key="canvasLocation" x="2683" y="1024"/>
         </scene>
         <!--Details-->
         <scene sceneID="3Le-xb-FTs">
@@ -294,7 +298,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="W8J-Lp-1T1" kind="push" identifier="add_to_cart" id="veq-gV-fD2"/>
+                                    <segue destination="sMk-rM-gxQ" kind="presentation" identifier="add_to_cart" id="veq-gV-fD2"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GR8-sn-s9I">
@@ -321,7 +325,7 @@
                         <barButtonItem key="backBarButtonItem" title="back" id="Swd-AE-WoU"/>
                         <barButtonItem key="rightBarButtonItem" title="Cart" id="ebk-9E-PzH">
                             <connections>
-                                <segue destination="W8J-Lp-1T1" kind="push" identifier="" id="d49-ER-H3M"/>
+                                <segue destination="sMk-rM-gxQ" kind="presentation" identifier="show_cart" id="d49-ER-H3M"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -337,7 +341,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BZH-vf-jSP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2494" y="340"/>
+            <point key="canvasLocation" x="3306" y="340"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pA3-3Z-izv">
@@ -357,12 +361,30 @@
             </objects>
             <point key="canvasLocation" x="964" y="349"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Mvm-i4-gmM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sMk-rM-gxQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="PiF-Be-sju"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rbG-0Z-WKv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="W8J-Lp-1T1" kind="relationship" relationship="rootViewController" id="klp-ak-3FX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v81-Qo-2Or" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1905" y="734"/>
+        </scene>
     </scenes>
     <resources>
         <image name="no-image" width="300" height="300"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="OdP-ww-NZ0"/>
-        <segue reference="RXi-bq-swd"/>
     </inferredMetricsTieBreakers>
 </document>
