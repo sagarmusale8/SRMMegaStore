@@ -14,4 +14,6 @@ class ProjectConstant: NSObject {
     static let SEGUE_DETIALS_ID = "show_details"
     static let SEGUE_ADD_TO_CART = "add_to_cart"
     static let SEGUE_SHOW_CART_ITEM_DETAIL = "show_cart_item_details"
+    static let SEGUE_PUSH_CART = "show_cart"
+    static let SEGUE_SHOW_CART_FROM_LIST = "show_cart_from_list"
 }
