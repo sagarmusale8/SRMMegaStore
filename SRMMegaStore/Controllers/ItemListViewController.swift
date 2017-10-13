@@ -88,17 +88,17 @@ class ItemListViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     // Showing filter options
     func showFilterView(filterButton: UIBarButtonItem){
-        let filterAlertView = UIAlertController(title: "Filters", message: "Choose filter", preferredStyle: UIAlertControllerStyle.ActionSheet)
+        let filterAlertView = UIAlertController(title: "Sort by", message: "Choose a filter to sort by", preferredStyle: UIAlertControllerStyle.ActionSheet)
         
-        let byNameFilterAction = UIAlertAction(title: "By Name", style: UIAlertActionStyle.Default) { (action: UIAlertAction) in
+        let byNameFilterAction = UIAlertAction(title: "Name", style: UIAlertActionStyle.Default) { (action: UIAlertAction) in
             self.fetchAllItems()
         }
         
-        let byPriceFilterAction = UIAlertAction(title: "By Price", style: UIAlertActionStyle.Default) { (action: UIAlertAction) in
+        let byPriceFilterAction = UIAlertAction(title: "Price", style: UIAlertActionStyle.Default) { (action: UIAlertAction) in
             self.fetchAllItems(FilterType.ByPrice)
         }
         
-        let byCategoryFilterAction = UIAlertAction(title: "By Category", style: UIAlertActionStyle.Default) { (action: UIAlertAction) in
+        let byCategoryFilterAction = UIAlertAction(title: "Category", style: UIAlertActionStyle.Default) { (action: UIAlertAction) in
             self.fetchAllItems(FilterType.ByCategory)
         }
         
