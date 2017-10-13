@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lOM-Lz-qFa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1611" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lOM-Lz-qFa">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -115,12 +115,14 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Mega Store" id="vdp-NE-ewE">
-                        <barButtonItem key="leftBarButtonItem" title="Filter" id="PYO-ZY-a5G">
+                        <barButtonItem key="leftBarButtonItem" title="Sort by" id="PYO-ZY-a5G">
+                            <color key="tintColor" red="0.0039215686269999999" green="0.71764705880000002" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="actionOnFilter:" destination="BYZ-38-t0r" id="spl-7z-KBh"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Cart" id="Gd6-fV-oQ0">
+                            <color key="tintColor" red="0.0039215686269999999" green="0.71764705880000002" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="sMk-rM-gxQ" kind="presentation" identifier="show_cart_from_list" id="OdP-ww-NZ0"/>
                             </connections>
@@ -135,7 +137,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1373" y="340"/>
+            <point key="canvasLocation" x="1517" y="330"/>
         </scene>
         <!--Cart-->
         <scene sceneID="ean-jp-NXm">
@@ -170,13 +172,13 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kNv-Ze-9Ym">
                                                     <rect key="frame" x="90" y="24" width="40.5" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="15d-go-AQi">
                                                     <rect key="frame" x="90" y="46" width="269" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tnT-DP-bWL">
@@ -218,7 +220,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Final Amount: $5000" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DMj-Ks-G8D">
                                 <rect key="frame" x="20" y="571" width="360" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mKJ-he-BVX">
@@ -284,7 +286,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W11-ib-mJs">
                                 <rect key="frame" x="50" y="380" width="253" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xSQ-OU-wnG">
@@ -304,7 +306,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GR8-sn-s9I">
                                 <rect key="frame" x="311" y="380" width="39" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -386,6 +388,6 @@
         <image name="shorts.jpg" width="225" height="225"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="veq-gV-fD2"/>
+        <segue reference="OdP-ww-NZ0"/>
     </inferredMetricsTieBreakers>
 </document>
